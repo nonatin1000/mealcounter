@@ -38,7 +38,6 @@ class Meal(AuditModel):
 	estimate = models.IntegerField('Estimativa')
 	start_time = models.TimeField('Inicio da Refeição')
 	end_time = models.TimeField('Fim da Refeição')
-	amount = models.IntegerField('Quantidade', default=0)
 	status = models.BooleanField('Ativo')
 
 	item_meal = models.ManyToManyField(ItemMeal, verbose_name='Itens', related_name='meals')
