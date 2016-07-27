@@ -18,6 +18,8 @@ from django.utils.decorators import method_decorator
 @method_decorator(login_required, name='dispatch')
 class MealList(ListView):
 	
+	paginate_by = 50
+	
 	model = Meal
 	template_name = 'meal/list.html'
 
@@ -101,6 +103,7 @@ class ItemMealDelete(DeleteView):
 @method_decorator(login_required, name='dispatch')
 class PlateList(ListView):
 	
+	paginate_by = 60
 	model = Plate
 	template_name = 'plate/list.html'
 
